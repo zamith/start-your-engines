@@ -1,0 +1,78 @@
+\documentclass[12pt,a4paper,twoside]{book}
+\usepackage[portuges,english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{a4wide}
+\usepackage[pdftex]{color,graphicx}
+\usepackage{url}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{todonotes}
+\usepackage{verbatim}
+
+\newcommand{\tab}{\hspace*{2em}}
+
+\parindent=16pt
+\parskip=4pt
+
+\pdfpagewidth 8.3in
+\pdfpageheight 11.7in 
+
+
+\textwidth 5.9in
+\oddsidemargin 0.3in
+\evensidemargin 0.02in
+
+\pagestyle{headings}
+
+\begin{document}
+\pagenumbering{roman}
+
+\title{Ruby on Rails: Start your Engines}
+\author{Luís Ferreira}
+
+\maketitle
+
+\tableofcontents
+\newpage
+
+\pagenumbering{arabic}
+\chapter{A little bit of History}
+Rails applications have evolved a whole lot throughout the years so, before even talking about engines let's take a step back and look at that nasty beast that were plugins.\\
+
+Plugins and Engines are very much alike in terms of the problem then intend to solve, that is when you want to experiment on new stuff without hurting the stable code base or just modularize your code so that it is more easily tested and maintained. They do, however, have some differences in how the solve this.\\
+
+Prior to rails 3 plugins would live in the \verb=vendor/plugin= directory and they would work fine if what you wanted was to extend \verb=ActiveRecord= or \verb=String= or any other class. On the other if you would like to add an actual model, controller, asset or even migration, brace yourself, your in for a boilerplate nightmare.\\
+
+Adding a controller would involve creating a generator that would copy it to the correct folder in the app, and the same goes for assets and migrations. This not only is a tedious job as it defeats one of the reasons we are using plugins in the first place, since it merges the plugin code with the application code. What a mess!\\
+
+As you might imagine these are just some of the more obvious problems with rails 2 plugins and quite frankly I think this is why nobody really used them.\\
+
+When rails 3 came out the concept of engines came with it, these were plugins but were bundled in gem. They were not quite as spectacular as they are today and I will not give them too much attention, I just want to mention a gem that was written by José Valim, a core Rails contributor, called Enginex. What this gem does is scaffold an engine with all the structure you need, as well as some very helpful boilerplate code.\\
+
+At the time rails 3.1 was released, Enginex was bundled with together with some other nice tweaks. This was the dawn of the age of the Engines!\\
+
+\chapter{Engines}
+
+Here is were we get into the good stuff, creating an engine.
+
+\section{How to create an engine}
+
+\section{Common patterns and best practices}
+
+\section{Extending the app with metaprogramming}
+
+\chapter{Testing}
+
+How to test an engine
+
+\section{Setting it up}
+
+\section{RSpec}
+
+\section{Cucumber}
+
+\chapter{Deploying}
+How to merge with the app, routes, load seeds, migrations
+
+\end{document}
